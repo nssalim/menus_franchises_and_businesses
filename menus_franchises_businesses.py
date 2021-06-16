@@ -31,7 +31,9 @@ brunch_menu = Menu("Brunch", brunch_items, 1100, 1600)
 # Output
 # Brunch
 print(brunch_menu)
-# Output
+# Output (before string representation method)
+# <__main__.Menu object at 0x7f16b88eeb38>
+# Output (after string representation method)
 # Brunch menu available from 1100 - 1600
 
 # Early-bird Dinners are served from 3pm to 6pm. 
@@ -40,7 +42,7 @@ early_bird_items = {
 }
 early_bird_menu = Menu("Early Bird", early_bird_items, 1500, 1800)
 print(early_bird_menu)
-# Output
+# Output (after string representation method)
 # Early Bird menu available from 1500 - 1800
 
 # Dinner served from 5pm to 11pm. 
@@ -49,7 +51,7 @@ dinner_items = {
 }
 dinner_menu = Menu("Dinner", dinner_items, 1700, 2300)
 print(dinner_menu)
-# Output
+# Output (after string representation method)
 # Dinner menu available from 1700 - 2300
 
 # Kids Dinners are served from 11am to 9pm. 
@@ -58,7 +60,7 @@ kids_items = {
 }
 kids_menu = Menu("Kids", kids_items, 1100, 2100)
 print(kids_menu)
-# Output
+# Output (after string representation method)
 # Kids menu available from 1100 - 2100
 
 
