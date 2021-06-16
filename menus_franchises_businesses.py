@@ -7,6 +7,26 @@
 # List filtering and aggregation
 # Representing objects as strings
 
+
+# CREATE FRANCHISES
+class Franchise:
+  def __init__(self, address, menus):
+    self.address = address
+    self.menus = menus
+
+#  string representation method for franchise address.
+  def __repr__(self):
+    return self.address
+
+# Time will dictate which menu is availabe for a customer order
+  def available_menus(self, time):
+    available_menus = []
+    for menu in self.menus:
+      if time >= menu.start_time and time <= menu.end_time:
+        available_menus.append(menu)
+    return available_menus
+
+
 # CREATE MENUS
 # There are four different menus: brunch, early-bird, dinner, and kids.
 
@@ -45,7 +65,7 @@ brunch_menu = Menu("Brunch", brunch_items, 1100, 1600)
 # Brunch menu available from 1100 - 1600
 
 # Test calculate_bill with brunch menu.
-print(brunch_menu.calculate_bill(['pancakes', 'home fries', 'coffee']))
+# print(brunch_menu.calculate_bill(['pancakes', 'home fries', 'coffee']))
 # Output
 # 13.5
 
@@ -59,7 +79,7 @@ early_bird_menu = Menu("Early Bird", early_bird_items, 1500, 1800)
 # Early Bird menu available from 1500 - 1800
 
 # Test calculate_bill with early_bird menu
-print(early_bird_menu.calculate_bill(['salumeria plate', 'mushroom ravioli (vegan)']))
+# print(early_bird_menu.calculate_bill(['salumeria plate', 'mushroom ravioli (vegan)']))
 # Output
 # 21.5
 
@@ -81,13 +101,37 @@ kids_menu = Menu("Kids", kids_items, 1100, 2100)
 # Output (after string representation method)
 # Kids menu available from 1100 - 2100
 
+# Franchises - flagship_store and new_installment
+menus = [brunch_menu, early_bird_menu, dinner_menu, kids_menu]
 
-# CREATE FRANCHISES
+flagship_store = Franchise("1232 West End Road", menus)
+new_installment = Franchise("12 East Mulberry Street", menus)
 
+# Test Franchise string representation for Franchise address
+# print(flagship_store)
+# Output (after Franchise string representation method)
+# 1232 West End Road
 
+# Test available_menus method (as time will dictate which menu is availabe for a customer order)
+# print(flagship_store.available_menus(1200))
+# Output
+# [Brunch menu available from 1100 - 1600, Kids menu available from 1100 - 2100]
+
+# print(flagship_store.available_menus(1700))
+# Output
+# [Early Bird menu available from 1500 - 1800, Dinner menu available from 1700 - 2300, Kids menu available from 1100 - 2100]
 
 
 # CREATE BUSINESSES
+
+
+
+
+
+
+
+
+
 
 
 
