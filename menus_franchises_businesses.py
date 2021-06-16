@@ -1,6 +1,6 @@
 # Classes - Menus, Franchises and Businesses
 
-# The restaurant has been growing well.  Use python to keep things organised.
+# The restaurant has been growing well.  Use python to keep things organised with a system of classes that help structure code and perform all business requirements such as menus, frachises and business diversification.
 
 # KEY CONCEPTS
 # Classes, Methods
@@ -8,7 +8,15 @@
 # Representing objects as strings
 
 
-# CREATE FRANCHISES
+# 3 - CREATE BUSINESSES
+# diversify. Create a restaurant that sells arepas!
+class Business:
+  def __init__(self, name, franchises):
+    self.name = name
+    self.franchises = franchises
+
+# 2 - CREATE FRANCHISES
+# build branded chain of restaurants
 class Franchise:
   def __init__(self, address, menus):
     self.address = address
@@ -26,9 +34,8 @@ class Franchise:
         available_menus.append(menu)
     return available_menus
 
-
-# CREATE MENUS
-# There are four different menus: brunch, early-bird, dinner, and kids.
+# 1 - CREATE MENUS
+# The restaurant has four different menus: brunch, early-bird, dinner, and kids.
 
 class Menu:
   def __init__ (self, name, items, start_time, end_time):
@@ -122,19 +129,22 @@ new_installment = Franchise("12 East Mulberry Street", menus)
 # [Early Bird menu available from 1500 - 1800, Dinner menu available from 1700 - 2300, Kids menu available from 1100 - 2100]
 
 
-# CREATE BUSINESSES
+# current business - ristorante italiano and franchises
+italiano  = Business("ristorante italiano", [flagship_store, new_installment])
 
+# Arepa
+# New business has menu and franchise.
+# Arepa Dinners are served from 10am to 8pm.
+arepas_items = {
+  'arepa pabellon': 7.00, 'pernil arepa': 8.50, 'guayanes arepa': 8.00, 'jamon arepa': 7.50
+}
+arepas_menu = Menu("Take a’ Arepa", arepas_items, 1000, 2000)
 
+arepas_place  = Franchise("189 Fitzgerald Avenue", [arepas_menu])
 
+# New business - Take a' Arepa franchise
+arepa = Business("Take a’ Arepa", [arepas_place])
 
-
-
-
-
-
-
-
-
-
-
-
+print(arepa.franchises[0].menus[0])
+# Output
+# Take a’ Arepa menu available from 1000 - 2000
