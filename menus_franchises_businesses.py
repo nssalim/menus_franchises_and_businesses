@@ -148,3 +148,17 @@ arepa = Business("Take a’ Arepa", [arepas_place])
 print(arepa.franchises[0].menus[0])
 # Output
 # Take a’ Arepa menu available from 1000 - 2000
+
+print(italiano.franchises[0].menus[0])
+# Output
+# Brunch menu available from 1100 - 1600
+
+print(italiano.franchises[1].menus[0])
+# Output
+# Brunch menu available from 1100 - 1600
+
+print(italiano.franchises[1].menus[3])
+# Output
+# Kids menu available from 1100 - 2100
+
+
