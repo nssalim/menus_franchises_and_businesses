@@ -1,6 +1,6 @@
 # Classes - Menus, Franchises and Businesses
 
-# The restaurant has been growing well.  Use python to keep things organised with a system of classes that help structure code and perform all business requirements such as menus, frachises and business diversification.
+# The restaurant has been growing well.  Use python to keep things organised with a system of classes that help structure code and perform all business requirements such as menus, franchises and business diversification.
 
 # KEY CONCEPTS
 # Classes, Methods
