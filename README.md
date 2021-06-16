@@ -1,6 +1,5 @@
 <h1>Classes - Menus, Franchises and Businesses</h1>
-<h4>The restaurant has been growing.  Classes help structure code and perform all business requirements such as menus, franchises and business diversification.
-</h4>
+<h4>The restaurant has been growing.  Use python classes to help structure code and perform all business requirements such as menus, franchises and business diversification.</h4>
 
 
 <br>
