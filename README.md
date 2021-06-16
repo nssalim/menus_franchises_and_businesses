@@ -1,4 +1,4 @@
-<h1>Classes - Menus Franchises and Businesses</h1>
+<h1>Classes - Menus, Franchises and Businesses</h1>
 <h4>The restaurant has been growing.  Keep things organised with a system of classes that help structure code and perform all business requirements such as menus, franchises and business diversification.
 </h4>
 
